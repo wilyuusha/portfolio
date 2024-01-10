@@ -1,92 +1,202 @@
 <html lang="en">
 <head>
-    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porfolio</title>
+    <title>Document</title>
 
-    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
 
+        * {
+            font-family: 'Red Hat Display', sans-serif;
+        }
+
+        .custom-color {
+            background-color: #FFDDB5;
+        }
+
+        .custom-btn-color {
+            background-color: #AC7B41;
+        }
+
+        .gradient-background {
+            background: linear-gradient(to right, #FFDDB5, white);
+        }
+
+    </style>
 </head>
 <body>
-    <!-- Start MyApp -->
-    <div id="app">
-        <div class="fixed grid grid-cols-2 text-white p-5 w-full bg-transparent">
-            <div class="col-span-1">
-                Wilbhur Queruela Porfolio
+    <div class="gradient-background bg-white container mx-auto px-8 py-4 space-y-5">
+        <nav class="flex md:flex-row flex-col justify-between font-semibold space-y-5">
+            <div class="md:text-lg space-x-4">
+                <a href="">Home</a>
+                <a href="">Explore</a>
+                <a href="">Community</a>
+                <a href="">Seek Funding</a>
+                <a href="">Interaction</a>
             </div>
-            <div class="col-span-1 flex justify-evenly">
-                <a href="#projects" class="hover:text-sky-500 cursor-pointer hover:underline underline-offset-4 transition duration-200 ease-linear"> Home </a>
-                <a href="" class="hover:text-sky-500 cursor-pointer hover:underline underline-offset-4 transition duration-200 ease-linear"> Projects </a>
-                <a href="" class="hover:text-sky-500 cursor-pointer hover:underline underline-offset-4 transition duration-200 ease-linear"> Social Media</a>
+            <div class="flex space-x-4 items-center justify-center">
+                <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                <input type="search" class="shadow border border-gray-400 rounded py-1">
+                <i class="fa fa-bell fa-lg" aria-hidden="true"></i>
+                <img src="https://source.unsplash.com/40x40" alt="" class="rounded-full">
+                <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
+            </div>
+        </nav>
+        <div class="flex items-center space-x-3 font-semibold">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            <p> Back to Status Page </p>
+        </div>
+        <div class="text-xl flex justify-center font-bold">
+            Join as Exhibitor
+        </div>
+        <div class="border bg-white grid grid-grid-cols-1 md:grid-cols-2 p-4 rounded">
+            <div class="flex flex-col items-center p-4 space-y-5">
+                <p class="font-bold"> Exhibitor Booking Payment </p>
+                <p class="font-bold"> Exhibitor Booking Payment Invoice </p>
+                <div class="w-full flex justify-end">
+                    <button class="custom-btn-color text-white rounded p-2 font shadow hover:bg-yellow-800 animation duration-300 ease-in-out">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        Modify Booking
+                    </button>
+                </div>
+                <div class="flex justify-between w-full">
+                    <p>Booking Number :</p>
+                    <p>888666368</p>
+                </div>
+                <div class="flex justify-between w-full font-bold">
+                    <p>Organization Name :</p>
+                    <p>User Name here</p>
+                </div>
+                <div class="flex justify-between w-full">
+                    <p>Booking date :</p>
+                    <p class="font-bold">12/12/23</p>
+                </div>
+                <div class="flex justify-between w-full">
+                    <p>Valid Until :</p>
+                    <p class="font-bold">12/12/23</p>
+                </div>
+                <div class="flex justify-between w-full">
+                    <p>Booking by :</p>
+                    <div class="space-y-5">
+                        <p>Wilbhur Queruela</p>
+                        <p>+639663053103</p>
+                    </div>
+                </div>
+                <div class="border-t flex justify-between w-full">
+                    <p>Name of product :</p>
+                    <div class="flex flex-col items-end space-y-5">
+                        <p>Type A</p>
+                        <p>Standard Booth</p>
+                        <p>3m x 3m</p>
+                    </div>
+                </div>
+                <div class="border-t flex justify-between w-full">
+                    <p>Quantity :</p>
+                    <p>3</p>
+                </div>
+                <div class="border-t flex justify-between w-full font-bold">
+                    <p>Booth number :</p>
+                    <div class="space-y-5">
+                        <p>A1</p>
+                        <p>A2</p>
+                        <p>A3</p>
+                    </div>
+                </div>
+                <div class="w-full flex items-center justify-end border-t border-black space-x-2">
+                    USD
+                    <img src="https://source.unsplash.com/30x20" alt="">
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>
+                <table class="table-auto w-full">
+                    <thead>
+                        <tr class="text-center">
+                            <td class="text-left">Product Name :</td>
+                            <td>Quantity :</td>
+                            <td>Unit Price :</td>
+                            <td>Sub total :</td>
+                        </tr>
+                    </thead>    
+                    <tbody>
+                        <tr class="text-center font-semibold">
+                            <td class="text-left pt-5">Standard Booth - Type A</td>
+                            <td>3</td>
+                            <td>700.00</td>
+                            <td>2100.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="w-full flex justify-between">
+                    <p>Tax : </p>
+                    <p>0.0 </p>
+                </div>
+                <div class="border-t w-full flex justify-between">
+                    <p>Discount : </p>
+                    <p>0.0</p>
+                </div>
+                <div class="border-t w-full flex justify-between">
+                    <p>Total : </p>
+                    <p>2100.00</p>
+                </div>
+                <button class="animation duration-300 ease-in-out hover:text-red-700 text-red-400 font-bold text-lg border-t-4 w-full border-black">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                    Delete booking
+                </button>
+                
+            </div>
+            <div class="flex justify-center p-4">
+                <div class="h-fit w-fit rounded-lg bg-gray-300 flex flex-col items-center space-y-5 p-5">
+                    <h2>Please select a payment method</h2>
+                    <div class="h-fit space-y-2">
+                        <div class="relative w-full h-full">
+                            <img src="https://source.unsplash.com/500x70" alt="" class="w-full rounded-lg">
+                            <p class="absolute inset-0 flex justify-center items-center text-white font-semibold"> Online Banking</p>
+                        </div>
+                    </div>
+                    <div class="h-fit space-y-2">
+                        <div class="relative w-full h-full">
+                            <img src="https://source.unsplash.com/500x70" alt="" class="w-full rounded-lg">
+                            <p class="absolute inset-0 flex justify-center items-center text-white font-semibold"> Credit & Credit Card</p>
+                        </div>
+                    </div>
+                    <div class="h-fit space-y-2">
+                        <div class="relative w-full h-full">
+                            <img src="https://source.unsplash.com/500x70" alt="" class="w-full rounded-lg">
+                            <p class="absolute inset-0 flex justify-center items-center text-white font-semibold"> E-wallet</p>
+                        </div>
+                    </div>
+                    <div class="h-fit space-y-2">
+                        <div class="relative w-full h-full">
+                            <img src="https://source.unsplash.com/500x70" alt="" class="w-full rounded-lg">
+                            <p class="absolute inset-0 flex justify-center items-center text-white font-semibold"> Cash</p>
+                        </div>
+                    </div>
+                    <button class="custom-color w-full rounded-md font-bold py-2">
+                        Proceed to Payment
+                    </button>
+                    <button class="border border-gray-600 w-full rounded-md font-bold py-2">
+                        Back
+                    </button>
+                </div>
             </div>
         </div>
-        <div class="w-full min-h-screen flex justify-center items-center text-white" style="background-image: url('./bg.png')">
-            <div class="grid grid-cols-2">
-                <div class="border border-white">
-                    <p class=""> I am Full-stack Developer </p>
+        <footer>
+            <div class="flex flex-col md:flex-row justify-between md:items-center space-y-2">
+                <div class="flex flex-col text-gray-400">
+                    <p>© 2023 广东（马来西亚）商品展览会</p>
+                    <p>Malaysia-China Trade Expo.</p>
+                    <p>All rights reserved</p>
                 </div>
-                <div class="border border-white">
-                </div>
-            </div>
-        </div>
-        <div id="projects" class="container mx-auto p-4 text-center">
-            <p class="text-2xl font-semibold"> My projects / Hobbies </p>
-            <div class="flex flex-wrap justify-evenly pt-10 min-w-full">
-                <div v-for="(project, index) in projectData">
-                    <project-items v-bind:project="project">  </project-items>
+                <div class="flex flex-col md:flex-row md:space-x-8 font-semibold">
+                    <a href="">About</a>
+                    <a href="">Contact</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Term & Condition</a>
                 </div>
             </div>
-        </div>
+        </footer>
     </div>
-    <!-- End MyApp -->
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"></script>
-    <script>
-        const { createApp, defineComponent } = Vue;
-
-        const ProjectItems = defineComponent({
-            props: {
-                project: Object,
-            },
-            template: `
-                <div class="max-w-sm bg-white cursor-pointer border border-gray-300 shadow-md rounded-lg transition duration-300 ease-in-out hover:scale-110 hover:shadow-lg">
-                    <a>
-                        <img class="rounded-t-lg h-44 w-64" :src="project.projImage" alt="" />
-                        <p class="mb-2 text-lg font-semibold tracking-tight text-gray-900">{{ project.projName }}</p>
-                    </a>
-                </div>
-            `,
-        });
-
-        createApp({
-            components: {
-                    ProjectItems,
-                },
-            setup() {
-                const projectData = [
-                    {
-                        projImage: "./images/geopikCover.jpg",
-                        projName: "GeoPik",
-                    },
-                    {
-                        projImage: "./images/bangkokBeyond.jpg",
-                        projName: "BangkokBeyond",
-                    },
-                    {
-                        projectImage: "./images/sample.jpg",
-                        projName: "Capstone Project"
-                    }
-                ];
-
-                return {
-                    projectData,
-                };
-            }
-        }).mount('#app')
-    </script>
 </body>
 </html>
