@@ -1,0 +1,215 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wilbhur Queruela | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"  rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Important -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .primary {
+        background-color: #FFF2F2;
+      }
+      .primary-second {
+        background-color: #A9B5DF;
+      }
+      .primary-third {
+        background-color: #7886C7;
+      }
+      .primary-fourth {
+        background-color: #2D336B;
+      }
+      .text-primary {
+        color: #2D336B;
+      }
+    }
+
+    /* DARK-ISH BLUE TO LIGHT-EST PROLLY CHANGED INTO COLOR SCHEME
+      #1A2D42
+      #2E4156
+      #AAB7B7
+      #C0C8CA
+      #D4D8DD
+    */
+  </style>
+</head>
+<body>
+    <main>
+      <!-- Navbar -->
+      <nav class="hidden md:block">
+        <div class="container mx-auto px-4 py-8">
+          <div class="grid grid-cols-2">
+            <div class="text-transparent  ">
+              Portfolio
+            </div>
+            <ul class="flex font-semibold items-center justify-center gap-x-16">
+              <li><a class="hover:text-primary duration-150 ease-in-out" href="#">Home</a></li>
+              <li><a class="hover:text-primary duration-150 ease-in-out" href="#experience">Experience</a></li>
+              <li><a class="hover:text-primary duration-150 ease-in-out" href="#">Projects</a></li>
+              <li><a class="hover:text-primary duration-150 ease-in-out text-primary font-bold text-xl underline underline-offset-4" href="#">Resume</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Hero -->
+      <section class="mt-8">
+        <div class="grid grid-cols-1 container mx-auto px-4 py-12 gap-8">
+          <!--  -->
+          <div class="grid grid-cols-12 gap-4">
+            <div class="col-span-12 md:col-span-8 space-y-4">
+                <span class="text-3xl font-bold">— HELLO</span>
+                <h1 class="text-6xl">I'm <span class="text-primary font-bold">Wil Q.</span></h1>
+                <p class="text-2xl max-w-3xl">I make websites, write code, and occasionally talk to myself while fixing bugs. This is where I share some of the stuff I’ve worked on.</p>
+                <p>No fluff — no thoughts — just code, caffeine, and questionable code.</p>
+            </div>
+
+            <div class="col-span-12 md:col-span-4">
+              <img src="assets/images/personal/profile_picture.JPG" alt="Hero Image" class="w-[500px] h-[500px] aspect-square object-cover rounded-lg shadow-lg">
+            </div>
+          </div>
+          <!-- Social Media's / Icons -->
+          <div class="flex gap-4 items-center">
+            <a target="_blank" href="https://github.com/wilyuusha" class="flex items-center">
+              <i class="fa fa-github text-4xl"></i>
+            </a>
+            <a target="_blank" href="https://linkedin.com/in/wilbhur-queruela-52345325a" class="flex items-center">
+              <i class="fa fa-linkedin text-4xl"></i>
+            </a>
+          </div>
+          <!-- Scrolldown -->
+          <div class="flex justify-center">
+            <a class="flex flex-col items-center justify-center" href="#experience">
+              <i class="fa fa-angle-down text-4xl animate-bounce"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="experience" class="mt-8">
+        <div class="max-w-7xl mx-auto px-4 py-12">
+          <h2 class="text-2xl font-bold mb-16">— Experience</h2>
+          <div class="max-w-4xl mx-auto">
+            <ol class="relative border-s border-gray-200">
+              <li class="mb-10 ms-4">
+                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1 -start-1.5 border border-white"></div>
+                <time class="mb-1 text-sm text-gray-400">March 2025 – Present</time>
+                <h3 class="text-lg font-semibold text-gray-900">Front-End Developer | Ethos Edge</h3>
+                <p class="text-base text-gray-500">
+                  Developed and maintained a WordPress-based website, focusing on responsive UI and product page creation. Occasionally assist with new feature rollouts and content updates.
+                </p>
+              </li>
+              <li class="mb-10 ms-4">
+                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1 -start-1.5 border border-white"></div>
+                <time class="mb-1 text-sm text-gray-400">Feb 2024 – Present</time>
+                <h3 class="text-lg font-semibold text-gray-900">Front-End Developer | Olympus Precast</h3>
+                <p class="text-base text-gray-500">
+                  Worked on building a functional WordPress site with a focus on front-end structure and clean design. Created individual post templates for each product.
+                </p>
+              </li>
+              <li class="mb-10 ms-4">
+                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1 -start-1.5 border border-white"></div>
+                <time class="mb-1 text-sm text-gray-400">Nov 2023 – Feb 2025</time>
+                <h3 class="text-lg font-semibold text-gray-900">Front-End Developer | HoneyDid LLC</h3>
+                <p class="text-base text-gray-500">
+                  Built and styled complex pages including dashboards, e-commerce, and marketing templates. Focused on clean, reusable components with responsive layouts.
+                </p>
+              </li>
+              <li class="mb-10 ms-4">
+                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
+                <time class="mb-1 text-sm text-gray-400">July 2023 – Nov 2023</time>
+                <h3 class="text-lg font-semibold text-gray-900">Full-Stack Developer | Goody Web Solutions, Inc.</h3>
+                <p class="text-base text-gray-500">
+                  Collaborated with designers to turn Figma mockups into fully functional web pages. Maintained consistency between UI/UX designs and live features.
+                </p>
+              </li>
+              <li class="mb-10 ms-4">
+                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
+                <time class="mb-1 text-sm text-gray-400">Intern | 4 Months in 2023</time>
+                <h3 class="text-lg font-semibold text-gray-900">Front-End Developer | GeoPik Technology, Inc.</h3>
+                <p class="text-base text-gray-500">
+                  Learned and applied Tailwind CSS to build responsive UI components. Gained hands-on experience with real-world development workflows.
+                </p>
+              </li>
+              <li class="ms-4">
+                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
+                <time class="mb-1 text-sm text-gray-400">Contract | 2023</time>
+                <h3 class="text-lg font-semibold text-gray-900">Front-End Developer | PetBuddies</h3>
+                <p class="text-base text-gray-500">
+                  Delivered modular components and styled pages using Tailwind CSS under tight deadlines. Focused on mobile-first development.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <!-- Projects -->
+      <section>
+        <div class="max-w-7xl mx-auto px-4 py-12">
+          <h2 class="text-2xl font-bold mb-24">— Projects</span></h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div class="group border hover:cursor-pointer hover:shadow-lg duration-150 ease-in-out duration-150 ease-in-out scale-100 hover:scale-105 bg-white">
+              <img src="assets/images/honeydid/hd_01.png" alt="honeydid_showcase" class="aspect-video object-contain object-top">
+              <div class="p-2 text-center">
+                <h3 class="text-lg font-semibold text-sm font-medium">HoneyDid</h3>
+              </div>
+            </div>
+            <div class="group border hover:cursor-pointer hover:shadow-lg duration-150 ease-in-out scale-100 hover:scale-105 bg-white">
+              <img src="assets/images/olympus-precast/op_01.png" alt="olympus_precast_showcase" class="aspect-video object-contain object-top">
+              <div class="p-2 text-center">
+                <h3 class="text-lg font-semibold text-sm font-medium">Olympus Precast</h3>
+              </div>
+            </div>
+            <div class="group border hover:cursor-pointer hover:shadow-lg duration-150 ease-in-out scale-100 hover:scale-105 bg-white">
+              <img src="assets/images/capstone/cs_01.png" alt="capstone_showcase" class="aspect-video object-contain object-top">
+              <div class="p-2 text-center">
+                <h3 class="text-lg font-semibold text-sm font-medium">Capstone</h3>
+              </div>
+            </div>
+            <div class="group border hover:cursor-pointer hover:shadow-lg duration-150 ease-in-out scale-100 hover:scale-105 bg-white">
+              <img src="assets/images/geopik/geo_01.png" alt="geopik_showcase" class="aspect-video object-contain object-top">
+              <div class="p-2 text-center">
+                <h3 class="text-lg font-semibold text-sm font-medium">Geopik</h3>
+              </div>
+            </div>
+            <div class="group border hover:cursor-pointer hover:shadow-lg duration-150 ease-in-out scale-100 hover:scale-105 bg-white">
+              <img src="assets/images/bangkokbeyond/bb_01.png" alt="bangkok_beyond_showcase" class="aspect-video object-contain object-top">
+              <div class="p-2 text-center">
+                <h3 class="text-lg font-semibold text-sm font-medium">Bangkok Beyond</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-12 py-6 flex flex-col gap-2 text-center shadow-lg text-sm text-gray-500 border-t shadow-[0_-4px_10px_rgba(0,0,0,0.1)]">
+      <span>wilqueruela@gmail.com</span>
+      <div class="space-x-4">
+        <a href="https://github.com/wilyuusha" target="_blank" class="hover:underline">GitHub</a>
+        <a href="https://www.linkedin.com/in/wilbhur-queruela-52345325a/" target="_blank" class="hover:underline">LinkedIn</a>
+      </div>
+    </footer>
+     
+    <!-- Scripts -->
+    <script async defer type="text/javascript" id="hs-script-loader" src="//js-na2.hs-scripts.com/242300197.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>    
+    <script src="assets/js/script.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP4MBDH0BL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KP4MBDH0BL');
+    </script>
+</body>
+</html>

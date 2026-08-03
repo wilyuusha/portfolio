@@ -41,6 +41,61 @@
       #D4D8DD
     */
   </style>
+  <style>
+    .project-card {
+      background: #f8f6f1;
+      border-radius: 1.25rem;
+      overflow: hidden;
+      transition: transform 180ms ease, background-color 180ms ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-2px);
+      background: #f2eee7;
+    }
+
+    .project-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+      transition: transform 220ms ease;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.02);
+    }
+
+    .project-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.72);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .project-modal-content {
+      width: min(100%, 900px);
+      max-height: 90vh;
+      overflow: auto;
+      border-radius: 1.25rem;
+      background: white;
+      padding: 1rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-modal-content img {
+      width: 100%;
+      max-height: 70vh;
+      object-fit: contain;
+      border-radius: 0.9rem;
+      background: #f8f6f1;
+    }
+  </style>
 </head>
 <body>
     <main>
@@ -52,9 +107,8 @@
               Portfolio
             </div>
             <ul class="flex font-semibold items-center justify-center gap-x-16">
-              <li><a class="hover:text-primary duration-150 ease-in-out" href="#">Home</a></li>
               <li><a class="hover:text-primary duration-150 ease-in-out" href="#experience">Experience</a></li>
-              <li><a class="hover:text-primary duration-150 ease-in-out" href="#">Projects</a></li>
+              <li><a class="hover:text-primary duration-150 ease-in-out" href="#project">Projects</a></li>
               <li><a class="hover:text-primary duration-150 ease-in-out text-primary font-bold text-xl underline underline-offset-4" href="#">Resume</a></li>
             </ul>
           </div>
@@ -93,56 +147,51 @@
           </div>
         </div>
       </section>
-      <section id="experience" class="mt-8">
-        <div class="max-w-7xl mx-auto px-4 py-12">
-          <h2 class="text-2xl font-bold mb-16">— Experience</h2>
+      <section id="experience" class="mt-4">
+        <div class="max-w-7xl mx-auto px-4 py-10 md:py-14">
+          <div class="mb-8 flex items-end justify-between gap-4">
+            <h2 class="text-2xl font-bold text-slate-900">— Experience</h2>
+            <!-- <p class="text-sm text-slate-500"></p> -->
+          </div>
           <div class="max-w-4xl mx-auto">
-            <ol class="relative border-s border-gray-200">
-              <li class="mb-10 ms-4">
-                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1 -start-1.5 border border-white"></div>
-                <time class="mb-1 text-sm text-gray-400">March 2025 – Present</time>
-                <h3 class="text-lg font-semibold text-gray-900">Front-End Developer | Ethos Edge</h3>
-                <p class="text-base text-gray-500">
-                  Developed and maintained a WordPress-based website, focusing on responsive UI and product page creation. Occasionally assist with new feature rollouts and content updates.
-                </p>
-              </li>
-              <li class="mb-10 ms-4">
-                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1 -start-1.5 border border-white"></div>
-                <time class="mb-1 text-sm text-gray-400">Feb 2024 – Present</time>
+            <ol class="relative border-s border-slate-200">
+              <li class="mb-6 ms-4 rounded-[1.25rem] border border-slate-200 bg-white/80 p-5 shadow-sm">
+                <div class="absolute w-3 h-3 bg-[#A9B5DF] rounded-full mt-1 -start-1.5 border border-white"></div>
+                <time class="mb-1 text-sm text-gray-400">02/2024 – 08/2025</time>
                 <h3 class="text-lg font-semibold text-gray-900">Front-End Developer | Olympus Precast</h3>
-                <p class="text-base text-gray-500">
+                <p class="mt-2 text-base text-gray-500">
                   Worked on building a functional WordPress site with a focus on front-end structure and clean design. Created individual post templates for each product.
                 </p>
               </li>
-              <li class="mb-10 ms-4">
-                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1 -start-1.5 border border-white"></div>
-                <time class="mb-1 text-sm text-gray-400">Nov 2023 – Feb 2025</time>
+              <li class="mb-6 ms-4 rounded-[1.25rem] border border-slate-200 bg-white/80 p-5 shadow-sm">
+                <div class="absolute w-3 h-3 bg-[#7886C7] rounded-full mt-1 -start-1.5 border border-white"></div>
+                <time class="mb-1 text-sm text-gray-400">11/2023 – 02/2025</time>
                 <h3 class="text-lg font-semibold text-gray-900">Front-End Developer | HoneyDid LLC</h3>
-                <p class="text-base text-gray-500">
+                <p class="mt-2 text-base text-gray-500">
                   Built and styled complex pages including dashboards, e-commerce, and marketing templates. Focused on clean, reusable components with responsive layouts.
                 </p>
               </li>
-              <li class="mb-10 ms-4">
-                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
-                <time class="mb-1 text-sm text-gray-400">July 2023 – Nov 2023</time>
+              <li class="mb-6 ms-4 rounded-[1.25rem] border border-slate-200 bg-white/80 p-5 shadow-sm">
+                <div class="absolute w-3 h-3 bg-slate-400 rounded-full mt-1.5 -start-1.5 border border-white"></div>
+                <time class="mb-1 text-sm text-gray-400"> 07/2023 – 11/2023</time>
                 <h3 class="text-lg font-semibold text-gray-900">Full-Stack Developer | Goody Web Solutions, Inc.</h3>
-                <p class="text-base text-gray-500">
+                <p class="mt-2 text-base text-gray-500">
                   Collaborated with designers to turn Figma mockups into fully functional web pages. Maintained consistency between UI/UX designs and live features.
                 </p>
               </li>
-              <li class="mb-10 ms-4">
-                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
+              <li class="mb-6 ms-4 rounded-[1.25rem] border border-slate-200 bg-white/80 p-5 shadow-sm">
+                <div class="absolute w-3 h-3 bg-slate-300 rounded-full mt-1.5 -start-1.5 border border-white"></div>
                 <time class="mb-1 text-sm text-gray-400">Intern | 4 Months in 2023</time>
                 <h3 class="text-lg font-semibold text-gray-900">Front-End Developer | GeoPik Technology, Inc.</h3>
-                <p class="text-base text-gray-500">
+                <p class="mt-2 text-base text-gray-500">
                   Learned and applied Tailwind CSS to build responsive UI components. Gained hands-on experience with real-world development workflows.
                 </p>
               </li>
-              <li class="ms-4">
-                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
+              <li class="ms-4 rounded-[1.25rem] border border-slate-200 bg-white/80 p-5 shadow-sm">
+                <div class="absolute w-3 h-3 bg-slate-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
                 <time class="mb-1 text-sm text-gray-400">Contract | 2023</time>
                 <h3 class="text-lg font-semibold text-gray-900">Front-End Developer | PetBuddies</h3>
-                <p class="text-base text-gray-500">
+                <p class="mt-2 text-base text-gray-500">
                   Delivered modular components and styled pages using Tailwind CSS under tight deadlines. Focused on mobile-first development.
                 </p>
               </li>
@@ -151,43 +200,71 @@
         </div>
       </section>
       <!-- Projects -->
-      <section>
+      <section id="project">
         <div class="max-w-7xl mx-auto px-4 py-12">
-          <h2 class="text-2xl font-bold mb-24">— Projects</span></h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <div class="group border hover:cursor-pointer hover:shadow-lg duration-150 ease-in-out duration-150 ease-in-out scale-100 hover:scale-105 bg-white">
-              <img src="assets/images/honeydid/hd_01.png" alt="honeydid_showcase" class="aspect-video object-contain object-top">
-              <div class="p-2 text-center">
-                <h3 class="text-lg font-semibold text-sm font-medium">HoneyDid</h3>
-              </div>
+          <div class="mb-8 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+            <div>
+              <h2 class="text-2xl font-bold text-slate-900">— Projects</h2>
+              <p class="mt-1 text-sm text-slate-500">A few snapshots of things I’ve built. Click to open the full view.</p>
             </div>
-            <div class="group border hover:cursor-pointer hover:shadow-lg duration-150 ease-in-out scale-100 hover:scale-105 bg-white">
-              <img src="assets/images/olympus-precast/op_01.png" alt="olympus_precast_showcase" class="aspect-video object-contain object-top">
-              <div class="p-2 text-center">
-                <h3 class="text-lg font-semibold text-sm font-medium">Olympus Precast</h3>
+          </div>
+
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <button type="button" class="project-card text-left" data-title="HoneyDid" data-image="assets/images/honeydid/hd_01.png">
+              <img src="assets/images/honeydid/hd_01.png" alt="HoneyDid showcase">
+              <div class="flex items-center justify-between px-4 py-3">
+                <span class="text-sm font-semibold text-slate-700">HoneyDid</span>
+                <span class="text-xs uppercase tracking-[0.2em] text-slate-500">Open</span>
               </div>
-            </div>
-            <div class="group border hover:cursor-pointer hover:shadow-lg duration-150 ease-in-out scale-100 hover:scale-105 bg-white">
-              <img src="assets/images/capstone/cs_01.png" alt="capstone_showcase" class="aspect-video object-contain object-top">
-              <div class="p-2 text-center">
-                <h3 class="text-lg font-semibold text-sm font-medium">Capstone</h3>
+            </button>
+
+            <button type="button" class="project-card text-left" data-title="Olympus Precast" data-image="assets/images/olympus-precast/op_01.png">
+              <img src="assets/images/olympus-precast/op_01.png" alt="Olympus Precast showcase">
+              <div class="flex items-center justify-between px-4 py-3">
+                <span class="text-sm font-semibold text-slate-700">Olympus Precast</span>
+                <span class="text-xs uppercase tracking-[0.2em] text-slate-500">Open</span>
               </div>
-            </div>
-            <div class="group border hover:cursor-pointer hover:shadow-lg duration-150 ease-in-out scale-100 hover:scale-105 bg-white">
-              <img src="assets/images/geopik/geo_01.png" alt="geopik_showcase" class="aspect-video object-contain object-top">
-              <div class="p-2 text-center">
-                <h3 class="text-lg font-semibold text-sm font-medium">Geopik</h3>
+            </button>
+
+            <button type="button" class="project-card text-left" data-title="Capstone Project (Game Development)" data-image="assets/images/capstone/cs_01.png">
+              <img src="assets/images/capstone/cs_01.png" alt="Capstone showcase">
+              <div class="flex items-center justify-between px-4 py-3">
+                <span class="text-sm font-semibold text-slate-700">Capstone Project (Game Development)</span>
+                <span class="text-xs uppercase tracking-[0.2em] text-slate-500">Open</span>
               </div>
-            </div>
-            <div class="group border hover:cursor-pointer hover:shadow-lg duration-150 ease-in-out scale-100 hover:scale-105 bg-white">
-              <img src="assets/images/bangkokbeyond/bb_01.png" alt="bangkok_beyond_showcase" class="aspect-video object-contain object-top">
-              <div class="p-2 text-center">
-                <h3 class="text-lg font-semibold text-sm font-medium">Bangkok Beyond</h3>
+            </button>
+
+            <button type="button" class="project-card text-left" data-title="Geopik" data-image="assets/images/geopik/geo_01.png">
+              <img src="assets/images/geopik/geo_01.png" alt="Geopik showcase">
+              <div class="flex items-center justify-between px-4 py-3">
+                <span class="text-sm font-semibold text-slate-700">Geopik</span>
+                <span class="text-xs uppercase tracking-[0.2em] text-slate-500">Open</span>
               </div>
-            </div>
+            </button>
+
+            <button type="button" class="project-card text-left" data-title="Bangkok Beyond" data-image="assets/images/bangkokbeyond/bb_01.png">
+              <img src="assets/images/bangkokbeyond/bb_01.png" alt="Bangkok Beyond showcase">
+              <div class="flex items-center justify-between px-4 py-3">
+                <span class="text-sm font-semibold text-slate-700">Bangkok Beyond</span>
+                <span class="text-xs uppercase tracking-[0.2em] text-slate-500">Open</span>
+              </div>
+            </button>
           </div>
         </div>
       </section>
+
+      <div id="projectModal" class="project-modal-backdrop hidden" aria-hidden="true">
+        <div class="project-modal-content">
+          <div class="mb-3 flex items-center justify-end">
+            <button id="closeProjectModal" type="button" class="rounded-full border border-slate-200 px-3 py-1 text-sm text-slate-600" aria-label="Close preview">Close</button>
+          </div>
+          <img id="projectModalImage" src="" alt="Project preview">
+          <div class="mt-4 flex items-center justify-between gap-3">
+            <h3 id="projectModalTitle" class="text-lg font-semibold text-slate-900"></h3>
+            <p class="text-sm text-slate-500">Tap outside to close</p>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="mt-12 py-6 flex flex-col gap-2 text-center shadow-lg text-sm text-gray-500 border-t shadow-[0_-4px_10px_rgba(0,0,0,0.1)]">
       <span>wilqueruela@gmail.com</span>
@@ -201,6 +278,43 @@
     <script async defer type="text/javascript" id="hs-script-loader" src="//js-na2.hs-scripts.com/242300197.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>    
     <script src="assets/js/script.js"></script>
+    <script>
+      const modal = document.getElementById('projectModal');
+      const modalImage = document.getElementById('projectModalImage');
+      const modalTitle = document.getElementById('projectModalTitle');
+      const closeModalButton = document.getElementById('closeProjectModal');
+
+      function closeProjectModal() {
+        modal.classList.add('hidden');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('overflow-hidden');
+      }
+
+      document.querySelectorAll('.project-card').forEach((card) => {
+        card.addEventListener('click', () => {
+          modalImage.src = card.dataset.image;
+          modalImage.alt = `${card.dataset.title} preview`;
+          modalTitle.textContent = card.dataset.title;
+          modal.classList.remove('hidden');
+          modal.setAttribute('aria-hidden', 'false');
+          document.body.classList.add('overflow-hidden');
+        });
+      });
+
+      closeModalButton.addEventListener('click', closeProjectModal);
+
+      modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          closeProjectModal();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeProjectModal();
+        }
+      });
+    </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP4MBDH0BL"></script>
