@@ -6,192 +6,95 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"  rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-
-  <!-- Important -->
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style type="text/tailwindcss">
-    @layer utilities {
-      .primary {
-        background-color: #FFF2F2;
-      }
-      .primary-second {
-        background-color: #A9B5DF;
-      }
-      .primary-third {
-        background-color: #7886C7;
-      }
-      .primary-fourth {
-        background-color: #2D336B;
-      }
-      .text-primary {
-        color: #2D336B;
-      }
-    }
-
-    /* DARK-ISH BLUE TO LIGHT-EST PROLLY CHANGED INTO COLOR SCHEME
-      #1A2D42
-      #2E4156
-      #AAB7B7
-      #C0C8CA
-      #D4D8DD
-    */
-  </style>
-  <style>
-    .project-card {
-      background: #f8f6f1;
-      border-radius: 1.25rem;
-      overflow: hidden;
-      transition: transform 180ms ease, background-color 180ms ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-2px);
-      background: #f2eee7;
-    }
-
-    .project-card img {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-      display: block;
-      transition: transform 220ms ease;
-    }
-
-    .project-card:hover img {
-      transform: scale(1.02);
-    }
-
-    .project-modal-backdrop {
-      position: fixed;
-      inset: 0;
-      z-index: 1000;
-      background: rgba(15, 23, 42, 0.72);
-      backdrop-filter: blur(6px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem;
-    }
-
-    .project-modal-content {
-      width: min(100%, 900px);
-      max-height: 90vh;
-      overflow: auto;
-      border-radius: 1.25rem;
-      background: white;
-      padding: 1rem;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-    }
-
-    .project-modal-content img {
-      width: 100%;
-      max-height: 70vh;
-      object-fit: contain;
-      border-radius: 0.9rem;
-      background: #f8f6f1;
-    }
-  </style>
 </head>
 <body>
     <main>
       <!-- Navbar -->
-      <nav class="hidden md:block">
-        <div class="container mx-auto px-4 py-8">
-          <div class="grid grid-cols-2">
-            <div class="text-transparent  ">
-              Portfolio
-            </div>
-            <ul class="flex font-semibold items-center justify-center gap-x-16">
-              <li><a class="hover:text-primary duration-150 ease-in-out" href="#experience">Experience</a></li>
-              <li><a class="hover:text-primary duration-150 ease-in-out" href="#project">Projects</a></li>
-              <li><a class="hover:text-primary duration-150 ease-in-out text-primary font-bold text-xl underline underline-offset-4" href="#">Resume</a></li>
+      <nav class="site-nav">
+        <div class="nav-inner">
+          <a class="wordmark" href="#top" aria-label="Wil Queruela home">WQ<span>.</span></a>
+          <ul class="nav-links">
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#project">Selected work</a></li>
             </ul>
-          </div>
         </div>
       </nav>
       <!-- Hero -->
-      <section class="mt-8">
-        <div class="grid grid-cols-1 container mx-auto px-4 py-12 gap-8">
-          <!--  -->
-          <div class="grid grid-cols-12 gap-4">
-            <div class="col-span-12 md:col-span-8 space-y-4">
-                <span class="text-3xl font-bold">— HELLO</span>
-                <h1 class="text-6xl">I'm <span class="text-primary font-bold">Wil Q.</span></h1>
-                <p class="text-2xl max-w-3xl">I make websites, write code, and occasionally talk to myself while fixing bugs. This is where I share some of the stuff I’ve worked on.</p>
-                <p>No fluff — no thoughts — just code, caffeine, and questionable code.</p>
+      <section id="top" class="hero-section">
+        <div class="hero-inner">
+          <div class="hero-copy">
+                <p class="eyebrow"><span class="status-dot"></span> VIRTUAL ASSISTANT <span class="eyebrow-divider">/</span> FREELANCER</p>
+                <h1>Reliable support<br>to keep <span>work moving.</span></h1>
+                <p class="hero-intro">I’m Wilbhur Queruela. I help people and teams stay organized, handle the details, and keep day-to-day work moving.</p>
+                <div class="hero-actions">
+                  <a class="primary-link" href="#project">View my work <span aria-hidden="true">↘</span></a>
+                </div>
             </div>
-
-            <div class="col-span-12 md:col-span-4">
-              <img src="assets/images/personal/profile_picture.JPG" alt="Hero Image" class="w-[500px] h-[500px] aspect-square object-cover rounded-lg shadow-lg">
+            <div class="hero-portrait">
+              <img src="assets/images/personal/profile_picture.JPG" alt="Wil Queruela">
+              <span class="portrait-caption">ORGANIZED. RELIABLE. REMOTE-READY.</span>
             </div>
-          </div>
-          <!-- Social Media's / Icons -->
-          <div class="flex gap-4 items-center">
-            <a target="_blank" href="https://github.com/wilyuusha" class="flex items-center">
-              <i class="fa fa-github text-4xl"></i>
-            </a>
-            <a target="_blank" href="https://linkedin.com/in/wilbhur-queruela-52345325a" class="flex items-center">
-              <i class="fa fa-linkedin text-4xl"></i>
-            </a>
-          </div>
-          <!-- Scrolldown -->
-          <div class="flex justify-center">
-            <a class="flex flex-col items-center justify-center" href="#experience">
-              <i class="fa fa-angle-down text-4xl animate-bounce"></i>
-            </a>
+          <div class="hero-meta">
+            <span>Based in the Philippines · Open to remote work</span>
+            <div class="social-links">
+              <a target="_blank" rel="noreferrer" href="https://github.com/wilyuusha">GitHub <span aria-hidden="true">↗</span></a>
+              <a target="_blank" rel="noreferrer" href="https://linkedin.com/in/wilbhur-queruela-52345325a">LinkedIn <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </div>
       </section>
-      <section id="experience" class="mt-4">
-        <div class="max-w-7xl mx-auto px-4 py-10 md:py-14">
-          <div class="mb-8 flex items-end justify-between gap-4">
-            <h2 class="text-2xl font-bold text-slate-900">— Experience</h2>
-            <!-- <p class="text-sm text-slate-500"></p> -->
+      <section id="experience" class="experience-section">
+        <div class="section-inner">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">THE PATH SO FAR</p>
+              <h2>Experience<span>.</span></h2>
+            </div>
+            <p class="section-note">A few teams and products I’ve helped move forward.</p>
           </div>
-          <div class="max-w-4xl mx-auto">
-            <ol class="relative border-s border-slate-200">
-              <li class="mb-6 ms-4 rounded-[1.25rem] border border-slate-200 bg-white/80 p-5 shadow-sm">
-                <div class="absolute w-3 h-3 bg-[#A9B5DF] rounded-full mt-1 -start-1.5 border border-white"></div>
-                <time class="mb-1 text-sm text-gray-400">02/2024 – 08/2025</time>
-                <h3 class="text-lg font-semibold text-gray-900">Front-End Developer | Olympus Precast</h3>
-                <p class="mt-2 text-base text-gray-500">
+          <div class="experience-list">
+            <ol>
+              <li>
+                <time>07/2025 – 10/2026</time>
+                <div class="experience-role"><h3>Administrative Clerk III</h3><span>Local Government Unit </span></div>
+                <p>
+                  Performed administrative duties, including schedule management, meeting coordination, correspondence, report preparation, records maintenance, and inventory management.
+                </p>
+              </li>
+              <li>
+                <time>02/2024 – 08/2025</time>
+                <div class="experience-role"><h3>Front-End Developer</h3><span>Olympus Precast</span></div>
+                <p>
                   Worked on building a functional WordPress site with a focus on front-end structure and clean design. Created individual post templates for each product.
                 </p>
               </li>
-              <li class="mb-6 ms-4 rounded-[1.25rem] border border-slate-200 bg-white/80 p-5 shadow-sm">
-                <div class="absolute w-3 h-3 bg-[#7886C7] rounded-full mt-1 -start-1.5 border border-white"></div>
-                <time class="mb-1 text-sm text-gray-400">11/2023 – 02/2025</time>
-                <h3 class="text-lg font-semibold text-gray-900">Front-End Developer | HoneyDid LLC</h3>
-                <p class="mt-2 text-base text-gray-500">
+              <li>
+                <time>11/2023 – 02/2025</time>
+                <div class="experience-role"><h3>Front-End Developer</h3><span>HoneyDid LLC</span></div>
+                <p>
                   Built and styled complex pages including dashboards, e-commerce, and marketing templates. Focused on clean, reusable components with responsive layouts.
                 </p>
               </li>
-              <li class="mb-6 ms-4 rounded-[1.25rem] border border-slate-200 bg-white/80 p-5 shadow-sm">
-                <div class="absolute w-3 h-3 bg-slate-400 rounded-full mt-1.5 -start-1.5 border border-white"></div>
-                <time class="mb-1 text-sm text-gray-400"> 07/2023 – 11/2023</time>
-                <h3 class="text-lg font-semibold text-gray-900">Full-Stack Developer | Goody Web Solutions, Inc.</h3>
-                <p class="mt-2 text-base text-gray-500">
+              <li>
+                <time>07/2023 – 11/2023</time>
+                <div class="experience-role"><h3>Full-Stack Developer</h3><span>Goody Web Solutions, Inc.</span></div>
+                <p>
                   Collaborated with designers to turn Figma mockups into fully functional web pages. Maintained consistency between UI/UX designs and live features.
                 </p>
               </li>
-              <li class="mb-6 ms-4 rounded-[1.25rem] border border-slate-200 bg-white/80 p-5 shadow-sm">
-                <div class="absolute w-3 h-3 bg-slate-300 rounded-full mt-1.5 -start-1.5 border border-white"></div>
-                <time class="mb-1 text-sm text-gray-400">Intern | 4 Months in 2023</time>
-                <h3 class="text-lg font-semibold text-gray-900">Front-End Developer | GeoPik Technology, Inc.</h3>
-                <p class="mt-2 text-base text-gray-500">
+              <li>
+                <time>2023 · INTERNSHIP</time>
+                <div class="experience-role"><h3>Front-End Developer</h3><span>GeoPik Technology, Inc.</span></div>
+                <p>
                   Learned and applied Tailwind CSS to build responsive UI components. Gained hands-on experience with real-world development workflows.
                 </p>
               </li>
-              <li class="ms-4 rounded-[1.25rem] border border-slate-200 bg-white/80 p-5 shadow-sm">
-                <div class="absolute w-3 h-3 bg-slate-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
-                <time class="mb-1 text-sm text-gray-400">Contract | 2023</time>
-                <h3 class="text-lg font-semibold text-gray-900">Front-End Developer | PetBuddies</h3>
-                <p class="mt-2 text-base text-gray-500">
+              <li>
+                <time>2023 · CONTRACT</time>
+                <div class="experience-role"><h3>Front-End Developer</h3><span>PetBuddies</span></div>
+                <p>
                   Delivered modular components and styled pages using Tailwind CSS under tight deadlines. Focused on mobile-first development.
                 </p>
               </li>
@@ -201,52 +104,53 @@
       </section>
       <!-- Projects -->
       <section id="project">
-        <div class="max-w-7xl mx-auto px-4 py-12">
-          <div class="mb-8 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+        <div class="section-inner projects-inner">
+          <div class="section-heading projects-heading">
             <div>
-              <h2 class="text-2xl font-bold text-slate-900">— Projects</h2>
-              <p class="mt-1 text-sm text-slate-500">A few snapshots of things I’ve built. Click to open the full view.</p>
+              <p class="section-kicker">A SELECTION OF RECENT WORK</p>
+              <h2>Selected work<span>.</span></h2>
             </div>
+            <p class="section-note">Interfaces, platforms, and experiments made with care.</p>
           </div>
 
-          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          <div class="project-grid">
             <button type="button" class="project-card text-left" data-title="HoneyDid" data-image="assets/images/honeydid/hd_01.png">
               <img src="assets/images/honeydid/hd_01.png" alt="HoneyDid showcase">
-              <div class="flex items-center justify-between px-4 py-3">
-                <span class="text-sm font-semibold text-slate-700">HoneyDid</span>
-                <span class="text-xs uppercase tracking-[0.2em] text-slate-500">Open</span>
+              <div class="project-caption">
+                <span><strong>HoneyDid</strong><small>Product platform · Front-end</small></span>
+                <span class="project-arrow" aria-label="Open project preview">↗</span>
               </div>
             </button>
 
             <button type="button" class="project-card text-left" data-title="Olympus Precast" data-image="assets/images/olympus-precast/op_01.png">
               <img src="assets/images/olympus-precast/op_01.png" alt="Olympus Precast showcase">
-              <div class="flex items-center justify-between px-4 py-3">
-                <span class="text-sm font-semibold text-slate-700">Olympus Precast</span>
-                <span class="text-xs uppercase tracking-[0.2em] text-slate-500">Open</span>
+              <div class="project-caption">
+                <span><strong>Olympus Precast</strong><small>WordPress · Product experience</small></span>
+                <span class="project-arrow" aria-label="Open project preview">↗</span>
               </div>
             </button>
 
             <button type="button" class="project-card text-left" data-title="Capstone Project (Game Development)" data-image="assets/images/capstone/cs_01.png">
               <img src="assets/images/capstone/cs_01.png" alt="Capstone showcase">
-              <div class="flex items-center justify-between px-4 py-3">
-                <span class="text-sm font-semibold text-slate-700">Capstone Project (Game Development)</span>
-                <span class="text-xs uppercase tracking-[0.2em] text-slate-500">Open</span>
+              <div class="project-caption">
+                <span><strong>Capstone Project</strong><small>Game development · Capstone</small></span>
+                <span class="project-arrow" aria-label="Open project preview">↗</span>
               </div>
             </button>
 
             <button type="button" class="project-card text-left" data-title="Geopik" data-image="assets/images/geopik/geo_01.png">
               <img src="assets/images/geopik/geo_01.png" alt="Geopik showcase">
-              <div class="flex items-center justify-between px-4 py-3">
-                <span class="text-sm font-semibold text-slate-700">Geopik</span>
-                <span class="text-xs uppercase tracking-[0.2em] text-slate-500">Open</span>
+              <div class="project-caption">
+                <span><strong>GeoPik</strong><small>Responsive interface · Internship</small></span>
+                <span class="project-arrow" aria-label="Open project preview">↗</span>
               </div>
             </button>
 
             <button type="button" class="project-card text-left" data-title="Bangkok Beyond" data-image="assets/images/bangkokbeyond/bb_01.png">
               <img src="assets/images/bangkokbeyond/bb_01.png" alt="Bangkok Beyond showcase">
-              <div class="flex items-center justify-between px-4 py-3">
-                <span class="text-sm font-semibold text-slate-700">Bangkok Beyond</span>
-                <span class="text-xs uppercase tracking-[0.2em] text-slate-500">Open</span>
+              <div class="project-caption">
+                <span><strong>Bangkok Beyond</strong><small>Travel · Web experience</small></span>
+                <span class="project-arrow" aria-label="Open project preview">↗</span>
               </div>
             </button>
           </div>
@@ -254,30 +158,30 @@
       </section>
 
       <div id="projectModal" class="project-modal-backdrop hidden" aria-hidden="true">
-        <div class="project-modal-content">
-          <div class="mb-3 flex items-center justify-end">
-            <button id="closeProjectModal" type="button" class="rounded-full border border-slate-200 px-3 py-1 text-sm text-slate-600" aria-label="Close preview">Close</button>
+        <div class="project-modal-content" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+          <div class="modal-toolbar">
+            <button id="closeProjectModal" type="button" aria-label="Close preview">Close <span aria-hidden="true">×</span></button>
           </div>
           <img id="projectModalImage" src="" alt="Project preview">
-          <div class="mt-4 flex items-center justify-between gap-3">
-            <h3 id="projectModalTitle" class="text-lg font-semibold text-slate-900"></h3>
-            <p class="text-sm text-slate-500">Tap outside to close</p>
+          <div class="modal-caption">
+            <h3 id="projectModalTitle"></h3>
+            <p>PROJECT PREVIEW</p>
           </div>
         </div>
       </div>
     </main>
-    <footer class="mt-12 py-6 flex flex-col gap-2 text-center shadow-lg text-sm text-gray-500 border-t shadow-[0_-4px_10px_rgba(0,0,0,0.1)]">
-      <span>wilqueruela@gmail.com</span>
-      <div class="space-x-4">
-        <a href="https://github.com/wilyuusha" target="_blank" class="hover:underline">GitHub</a>
-        <a href="https://www.linkedin.com/in/wilbhur-queruela-52345325a/" target="_blank" class="hover:underline">LinkedIn</a>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-name" href="#top">Wilbhur Queruela</a>
+        <div class="footer-meta">
+          <a href="mailto:wilqueruela@gmail.com">wilqueruela@gmail.com</a>
+          <a href="https://linkedin.com/in/wilbhur-queruela-52345325a" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
     </footer>
      
     <!-- Scripts -->
     <script async defer type="text/javascript" id="hs-script-loader" src="//js-na2.hs-scripts.com/242300197.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>    
-    <script src="assets/js/script.js"></script>
     <script>
       const modal = document.getElementById('projectModal');
       const modalImage = document.getElementById('projectModalImage');
