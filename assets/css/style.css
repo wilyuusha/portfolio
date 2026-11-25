@@ -529,12 +529,12 @@ button {
   display: block;
 }
 
-.project-card--featured .project-visual {
+.project-card--live .project-visual {
   box-shadow: 0 0 0 1px var(--line);
   transition: box-shadow 200ms ease;
 }
 
-.project-card--featured:hover .project-visual {
+.project-card--live:hover .project-visual {
   box-shadow: 0 0 0 1px var(--accent);
 }
 
