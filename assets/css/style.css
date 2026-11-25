@@ -37,6 +37,38 @@ body.overflow-hidden {
   overflow: hidden;
 }
 
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+main:focus {
+  outline: none;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 30;
+  top: 10px;
+  left: 10px;
+  padding: 10px 16px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  transform: translateY(-160%);
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -48,10 +80,13 @@ button {
 }
 
 .site-nav {
-  position: relative;
-  z-index: 5;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   width: 100%;
   border-bottom: 1px solid rgba(29, 41, 37, 0.1);
+  background: rgba(243, 246, 237, 0.92);
+  backdrop-filter: blur(12px);
 }
 
 .nav-inner,
@@ -105,6 +140,30 @@ button {
 .nav-links a span,
 .social-links a span {
   color: var(--accent);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-cta {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  border: 1px solid var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  transition: color 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.nav-cta:hover {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
 }
 
 .hero-section {
@@ -288,6 +347,54 @@ button {
   font-weight: 700;
 }
 
+.about-section {
+  padding: 90px 0;
+}
+
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.capability-card {
+  position: relative;
+  padding: 28px 26px 30px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.capability-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 14px 30px rgba(38, 51, 43, 0.07);
+}
+
+.capability-number {
+  display: block;
+  margin-bottom: 22px;
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.capability-card h3 {
+  margin: 0 0 9px;
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.capability-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
 .experience-section {
   padding: 100px 0 108px;
   background: var(--surface);
@@ -417,6 +524,34 @@ button {
   transform: translateY(-3px);
 }
 
+.project-visual {
+  position: relative;
+  display: block;
+}
+
+.project-card--featured .project-visual {
+  box-shadow: 0 0 0 1px var(--line);
+  transition: box-shadow 200ms ease;
+}
+
+.project-card--featured:hover .project-visual {
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.project-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 5px 10px;
+  background: var(--ink);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
 .project-caption {
   display: flex;
   align-items: center;
@@ -518,9 +653,9 @@ button {
 
 .modal-caption {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 16px;
+  gap: 24px;
   padding-top: 14px;
 }
 
@@ -530,13 +665,48 @@ button {
   font-size: 20px;
 }
 
-.modal-caption p {
-  margin: 0;
+.modal-description {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.modal-caption-side {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.modal-kicker {
+  margin: 3px 0 0;
   color: var(--muted);
   font-family: var(--font-display);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 1px;
+}
+
+.modal-live-link {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  transition: background 160ms ease;
+}
+
+.modal-live-link:hover {
+  background: var(--accent);
+}
+
+.modal-live-link span {
+  color: #a7c77b;
 }
 
 .site-footer {
@@ -552,10 +722,22 @@ button {
   gap: 24px;
 }
 
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .footer-name {
   font-family: var(--font-display);
   font-size: 20px;
   font-weight: 600;
+}
+
+.footer-left p {
+  margin: 0;
+  color: #aeb9b1;
+  font-size: 11px;
 }
 
 .footer-meta {
@@ -604,6 +786,18 @@ button {
     font-size: 13px;
   }
 
+  .nav-right {
+    gap: 18px;
+  }
+
+  .capability-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .capability-card:last-child {
+    grid-column: 1 / -1;
+  }
+
   .hero-inner {
     grid-template-columns: minmax(0, 1fr) minmax(220px, 0.72fr);
     column-gap: 30px;
@@ -622,6 +816,7 @@ button {
     padding: 10px 10px 26px;
   }
 
+  .about-section,
   .experience-section {
     padding: 76px 0;
   }
@@ -652,6 +847,33 @@ button {
   .nav-links {
     gap: 16px;
     font-size: 12px;
+  }
+
+  .nav-links li:first-child {
+    display: none;
+  }
+
+  .nav-cta {
+    min-height: 34px;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+
+  .capability-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .capability-card:last-child {
+    grid-column: auto;
+  }
+
+  .capability-card {
+    padding: 22px;
+  }
+
+  .capability-number {
+    margin-bottom: 14px;
   }
 
   .hero-inner {
@@ -722,6 +944,7 @@ button {
     font-size: 13px;
   }
 
+  .about-section,
   .experience-section {
     padding: 66px 0 70px;
   }
@@ -764,12 +987,22 @@ button {
     padding: 12px;
   }
 
+  .modal-caption {
+    flex-direction: column;
+    gap: 12px;
+  }
+
   .modal-caption h3 {
     font-size: 17px;
   }
 
-  .modal-caption p {
-    font-size: 8px;
+  .modal-caption-side {
+    align-items: flex-start;
+  }
+
+  .modal-description,
+  .modal-kicker {
+    font-size: 10px;
   }
 
   .footer-inner {
@@ -791,6 +1024,10 @@ button {
   .nav-links {
     gap: 11px;
     font-size: 11px;
+  }
+
+  .nav-cta {
+    display: none;
   }
 
   .hero-copy h1 {
