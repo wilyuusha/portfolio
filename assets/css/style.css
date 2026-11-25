@@ -436,20 +436,20 @@ button {
   list-style: none;
 }
 
-.experience-list li {
+.experience-list > ol > li {
   display: grid;
-  grid-template-columns: 160px minmax(220px, 0.9fr) minmax(280px, 1.2fr);
+  grid-template-columns: 160px minmax(0, 1fr);
   align-items: baseline;
   gap: 26px;
   padding: 23px 0;
   border-top: 1px solid var(--line);
 }
 
-.experience-list li:last-child {
+.experience-list > ol > li:last-child {
   border-bottom: 1px solid var(--line);
 }
 
-.experience-list time {
+.experience-list > ol > li > time {
   color: var(--muted);
   font-family: var(--font-display);
   font-size: 11px;
@@ -473,12 +473,6 @@ button {
   font-weight: 600;
 }
 
-.experience-list li > p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.65;
-}
 
 .projects-inner {
   padding-top: 100px;
@@ -821,8 +815,8 @@ button {
     padding: 76px 0;
   }
 
-  .experience-list li {
-    grid-template-columns: 135px minmax(160px, 0.85fr) minmax(180px, 1.15fr);
+  .experience-list > ol > li {
+    grid-template-columns: 135px minmax(0, 1fr);
     gap: 18px;
   }
 
@@ -949,14 +943,14 @@ button {
     padding: 66px 0 70px;
   }
 
-  .experience-list li {
+  .experience-list > ol > li {
     grid-template-columns: 1fr;
     gap: 6px;
     padding: 18px 0;
   }
 
-  .experience-list li > p {
-    margin-top: 5px;
+  .experience-list > ol > li > ul {
+    margin-top: 6px;
   }
 
   .project-grid {
