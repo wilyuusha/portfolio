@@ -155,16 +155,16 @@
           </div>
 
           <div class="project-grid">
-            <button type="button" class="project-card project-card--featured text-left" data-title="Inventory | Supply Management" data-image="assets/images/inventory-supply/cover.svg" data-url="https://inventory-supply.vercel.app/" data-description="A supply management web app built for current work. Live on Vercel.">
+            <a class="project-card project-card--featured text-left" href="https://inventory-supply.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open Inventory | Supply Management live site in a new tab">
               <span class="project-visual">
                 <img src="assets/images/inventory-supply/cover.svg" alt="Inventory | Supply Management cover">
-                <span class="project-badge">Live site</span>
+                <span class="project-badge">Live site ↗</span>
               </span>
               <div class="project-caption">
-                <span><strong>Inventory | Supply Management</strong><small>Inventory system · Current work</small></span>
-                <span class="project-arrow" aria-label="Open project preview">↗</span>
+                <span><strong>Inventory | Supply Management</strong><small>Inventory system · Current work · Opens in a new tab</small></span>
+                <span class="project-arrow" aria-hidden="true">↗</span>
               </div>
-            </button>
+            </a>
 
             <button type="button" class="project-card text-left" data-title="HoneyDid" data-image="assets/images/honeydid/hd_01.png" data-description="Product platform pages, dashboards, and e-commerce templates.">
               <img src="assets/images/honeydid/hd_01.png" alt="HoneyDid showcase">
@@ -282,7 +282,7 @@
         if (lastFocusedElement) lastFocusedElement.focus();
       }
 
-      document.querySelectorAll('.project-card').forEach((card) => {
+      document.querySelectorAll('button.project-card').forEach((card) => {
         card.addEventListener('click', () => openProjectModal(card));
       });
 
